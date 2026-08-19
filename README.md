@@ -4,7 +4,9 @@
 
 <!-- MAIN DEMO BANNER / GIF -->
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8c86407-790b-4b2f-8412-d114fb1bf521" alt="App Walkthrough Demo" width="300" />
+
+  <img width="200" height="400" alt="2026-08-1922-07-45-ezgif com-optimize" src="https://github.com/user-attachments/assets/f40724e6-124d-403e-8b17-6448ae3b4558" />
+
 </p>
 
 ---
@@ -17,7 +19,7 @@
 
 ## Tech Stack 
 
-* **Framework:** .NET MAUI (.NET 8 / .NET 9)
+* **Framework:** .NET MAUI 
 * **Language:** C#, XAML
 
 
