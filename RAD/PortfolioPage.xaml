@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RAD.PortfolioPage"
+             Title="My Projects"
+             BackgroundColor="#121212">
+    <Grid>
+
+        <ScrollView Padding="20">
+            <VerticalStackLayout Spacing="20">
+
+                <Frame x:Name="Card1" BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="15" HasShadow="True" Padding="20" Opacity="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCard1Tapped" />
+                    </Frame.GestureRecognizers>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Claims Detective" FontSize="22" FontAttributes="Bold" TextColor="#7B61FF"/>
+                        <Label Text="A gamified learning app built for Etiqa Insurance." FontSize="15" TextColor="#E0E0E0" />
+                        <Label Text="Tap to read more..." FontSize="12" FontAttributes="Italic" TextColor="#7B61FF" Margin="0,5,0,0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame x:Name="Card2" BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="15" HasShadow="True" Padding="20" Opacity="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCard2Tapped" />
+                    </Frame.GestureRecognizers>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Python Data Scraper" FontSize="22" FontAttributes="Bold" TextColor="#7B61FF"/>
+                        <Label Text="Automated tool for real-time hardware prices." FontSize="15" TextColor="#E0E0E0" />
+                        <Label Text="Tap to read more..." FontSize="12" FontAttributes="Italic" TextColor="#7B61FF" Margin="0,5,0,0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame x:Name="Card3" BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="15" HasShadow="True" Padding="20" Opacity="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCard3Tapped" />
+                    </Frame.GestureRecognizers>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Facial Recognition System" FontSize="22" FontAttributes="Bold" TextColor="#7B61FF"/>
+                        <Label Text="Automated tool that marks attendances using face recognition." FontSize="15" TextColor="#E0E0E0" />
+                        <Label Text="Tap to read more..." FontSize="12" FontAttributes="Italic" TextColor="#7B61FF" Margin="0,5,0,0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame x:Name="Card4" BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="15" HasShadow="True" Padding="20" Opacity="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCard4Tapped" />
+                    </Frame.GestureRecognizers>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Deep Learning Recommendation System" FontSize="22" FontAttributes="Bold" TextColor="#7B61FF"/>
+                        <Label Text="A recommendation system that uses Neural Collaborative Filtering" FontSize="15" TextColor="#E0E0E0" />
+                        <Label Text="Tap to read more..." FontSize="12" FontAttributes="Italic" TextColor="#7B61FF" Margin="0,5,0,0"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Grid x:Name="PopupOverlay" BackgroundColor="#CC000000" IsVisible="False" Opacity="0">
+
+            <Frame x:Name="PopupBox" BackgroundColor="#1E1E1E" BorderColor="#7B61FF" 
+                   CornerRadius="20" HasShadow="True" Padding="25" 
+                   VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="320">
+
+                <VerticalStackLayout Spacing="15">
+                    <Label x:Name="PopupTitle" Text="Title" FontSize="24" FontAttributes="Bold" TextColor="#FFFFFF" HorizontalOptions="Center" />
+
+                    <BoxView HeightRequest="1" Color="#333333" HorizontalOptions="Fill" />
+
+                    <Label x:Name="PopupDescription" Text="Description goes here." FontSize="15" TextColor="#D1D1D1" LineHeight="1.5" />
+                    <Label x:Name="PopupTech" Text="Tech:" FontSize="13" FontAttributes="Italic" TextColor="#A58DFF" />
+
+                    <Button Text="Close" BackgroundColor="#333333" TextColor="White" CornerRadius="10" Margin="0,15,0,0" Clicked="OnClosePopupClicked" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

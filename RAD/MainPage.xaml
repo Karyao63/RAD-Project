@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RAD.MainPage"
+             BackgroundColor="#F4F4F4">
+    <Grid RowDefinitions="Auto, *">
+
+        <VerticalStackLayout Grid.Row="0" 
+                             BackgroundColor="#121212" 
+                             Padding="0,25,0,15">
+
+            <Label Text="DEV PORTFOLIO" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="#7B61FF" 
+                   HorizontalOptions="Center" 
+                   CharacterSpacing="2" />
+
+        </VerticalStackLayout>
+
+        <ScrollView BackgroundColor="#121212" Grid.Row="1">
+
+        <VerticalStackLayout x:Name="MainContent" Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Frame HeightRequest="150" WidthRequest="150" 
+                   CornerRadius="75" HorizontalOptions="Center" 
+                   Padding="3" IsClippedToBounds="True" BackgroundColor="#7B61FF" HasShadow="True">
+                <Image Source="profile.png" Aspect="AspectFill" />
+            </Frame>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="HELLO, I'M KAR YAO" 
+                       FontSize="30" FontAttributes="Bold" 
+                       HorizontalOptions="Center" TextColor="#FFFFFF" />
+
+                <Label Text="System Developer | Gamer | Tech Enthusiast" 
+                       FontSize="16" HorizontalOptions="Center" 
+                       TextColor="#B3B3B3" HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" Margin="0,5,0,10">
+                <Frame BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="8" Padding="15,8" HasShadow="False">
+                    <Label Text="GitHub" TextColor="#E0E0E0" FontAttributes="Bold" FontSize="13"/>
+                </Frame>
+                <Frame BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="8" Padding="15,8" HasShadow="False">
+                    <Label Text="LinkedIn" TextColor="#E0E0E0" FontAttributes="Bold" FontSize="13"/>
+                </Frame>
+                <Frame BackgroundColor="#1E1E1E" BorderColor="#333333" CornerRadius="8" Padding="15,8" HasShadow="False">
+                    <Label Text="Email" TextColor="#E0E0E0" FontAttributes="Bold" FontSize="13"/>
+                </Frame>
+            </HorizontalStackLayout>
+
+            <Frame BackgroundColor="#1A1A24" BorderColor="#7B61FF" CornerRadius="15" HasShadow="True" Padding="15" Margin="0,0,0,10" WidthRequest="320" HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
+                    <Label Text="" FontSize="28" VerticalOptions="Center"/>
+                    <VerticalStackLayout>
+                        <Label Text="CURRENT FOCUS" FontSize="11" TextColor="#A58DFF" FontAttributes="Bold" CharacterSpacing="1.5"/>
+                        <Label Text="Final Year Project: Claims Detective" FontSize="14" TextColor="#FFFFFF" FontAttributes="Bold" Margin="0,2,0,0"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Button Text="View My Work" 
+                    BackgroundColor="#7B61FF" TextColor="White"
+                    FontAttributes="Bold" FontSize="16"
+                    CornerRadius="25" HeightRequest="55" WidthRequest="220"
+                    Clicked="OnViewWorkClicked" HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </Grid>
+</ContentPage>
